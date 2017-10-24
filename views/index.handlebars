@@ -1,0 +1,35 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs="
+ crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0="
+ crossorigin="anonymous" />
+<style>
+	td {
+		padding-right: 8px;
+	}
+</style>
+
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
+
+<div>
+	<a href="/name"></a>
+</div>
+
+<table style="width:100%">
+	<tr>
+		<th>username</th>
+		<th>nickname</th>
+		<th><a href="/sort/createdAt">createdAt</a></th>
+		<th><a href="/sort/joinedAt">joinedAt</a></th>
+		<th><a href="/sort/diff">difference</a></th>
+	</tr>
+	{{#each array}}
+		<tr>
+			<td>{{ this.name }}</td>
+			<td>{{ this.nick }}</td>
+			<td>{{ this.created }}</td>
+			<td>{{ this.joined }}</td>
+			<td>{{ this.diff }}</td>
+		</tr>
+	{{/each}}
+</table>
